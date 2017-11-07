@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
+import {HashRouter} from 'react-router-dom'
 
 // import registerServiceWorker from './registerServiceWorker';
 
@@ -12,8 +13,8 @@ import App from './components/App';
 // TODO tell use HashRouter to wrap our application.
 
 ReactDOM.render(
-
+  <HashRouter>
     <App />
-  ,
-document.getElementById('root'));
+  </HashRouter>
+  , document.getElementById('root'));
 // registerServiceWorker();

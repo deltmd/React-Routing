@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { getPeople } from '../../usersService.js';
+import { Link } from 'react-router-dom'
+
 
 export default class People extends Component {
   constructor() {
@@ -20,10 +22,13 @@ export default class People extends Component {
   render() {
     const people = this.state.people.map((e, i) => {
       return (
-        {/* TODO put in Link tags to take us to each specific person based on the person's id. */}
+        <div>
+          {/* TODO put in Link tags to take us to each specific person based on the person's id. */}
+          <Link to={`/people/${e.id}`}>
+            <h3>{e.name}</h3>
+          </Link>
 
-          <h3>{e.name}</h3>
-
+        </div>
       )
     })
     return (
